@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>Assignment 2 - Stocks Page</title>
+        <link rel="stylesheet" href="Assignment2.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script defer src="Assignment2.js"></script>
+    </head>
+    <body>
+        <h1>INST377 - Activities</h1>
+        <!-- Navigation Bar -->
+        <nav>
+            <nav id="navBar">
+                <ul>
+                    <li><a href="Assignment2-HomePage.html">Home</a></li>
+                    <li><a href="Assignment2-StocksPage.html">Stocks</a></li>
+                    <li><a href="Assignment2-DogsPage.html">Dogs</a></li>
+                </ul>
+        </nav>
+        <h1>Let's chart some stocks!</h1>
+        <!-- Small Form -->
+        <form id="stocksForm">
+            <input type="text" maxlength="5" id="stockInput">
+            <br>
+            <select name="days" id="daysSelect">
+                <option value="30">30 Days</option>
+                <option value="60">60 Days</option>
+                <option value="90">90 Days</option>
+            </select>
+            <br>
+            <input type="submit" class="button-12">
+        </form>
+        <!-- Chart -->
+        <div id="chartContainer">
+            <canvas id="myChart"></canvas>
+        </div>
+        <!-- Top 5 Table -->
+        <table id="topFiveTable">
+            <tr>
+                <th>TICKER</th>
+                <th>COMMENT COUNT</th>
+                <th>SENTIMENT</th>
+            </tr>
+        </table>
+        <!-- Audio -->
+        <div class="audioContainer">
+            <h1>In this web page there are options to Navigate using Audio!</h1>
+            <p>Ensure your mic is enable to be able to use this feature.</p>
+            <ul>
+                <li>Lookup stock ticker</li>
+                    <ul>
+                        <li>Example:</li>
+                            <ul>
+                                <li>Say: <strong>Lookup MSFT</strong></li>
+                            </ul>
+                    </ul>
+                <li>Navigate to a different page</li>
+                    <ul>
+                        <li>Say: <strong>Navigate to &lt;page></strong></li>
+                    </ul>
+                <li>Change the page color</li>
+                    <ul>
+                        <li>Say: <strong>Change the color to &lt;color></strong></li>
+                    </ul>
+                <li>Say Hello Back to you!</li>
+                    <ul>
+                        <li>Say: <strong>Hello</strong></li>
+                    </ul>
+            </ul>
+            <div class="listeningButtons">
+                <button class='button-19' id="onButton">Turn On Listening</button>
+                <button class='button-19' id="offButton">Turn Off Listening</button>
+            </div>
+        </div>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+    </body>
+</html>
